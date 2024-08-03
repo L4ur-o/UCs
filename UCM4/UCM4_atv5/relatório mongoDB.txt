@@ -1,0 +1,71 @@
+-- Criação do banco de dados e coleção
+DB NAME: 'UCM4_atv4_noSQL'
+COLLECTION: 'Produto'
+
+Fora incluso todos os produtos da tabela "produto":
+
+[
+  { "id": 1, "nome": "Ventilador de mesa", "descricao": "Ventilador branco 40cm 110v", "estoque": 5, "fabricante": "Bons Ventos" },
+  { "id": 2, "nome": "Ventilador de mesa", "descricao": "Ventilador preto 40cm 110v", "estoque": 5, "fabricante": "Ultralar" },
+  { "id": 3, "nome": "Ventilador de mesa 220", "descricao": "Ventilador branco 40cm 220v", "estoque": 5, "fabricante": "Bons Ventos" },
+
+(...)
+]
+
+No Query History procuramos pelo campo de ID "9" que tem o nome de "Liquidificador" e descrição "Cor Branca 110v"
+e pusemos o estoque de 70 unidades.
+
+código abaixo:
+{"id" : 9}
+{$set{"estoque": 70}}
+
+Procuramos pelo campo de nome do produto "Ventilador" no qual encontramos 3 produtos de 3 empresas distintas:
+
+{"nome" : "Liquidificador"}
+
+
+_id: ObjectId(66ae40d52d389ca176b9f4b5)
+id : 8
+nome : "Liquidificador"
+descricao : "Cor Preta 110v"
+estoque : 7
+fabricante : "Casa & cia"
+
+_id: ObjectId(66ae40d52d389ca176b9f4b6)
+id : 9
+nome : "Liquidificador"
+descricao : "Cor Branca 110v"
+estoque : 70
+fabricante : "Ultralar"
+
+_id: ObjectId(66ae40d52d389ca176b9f4b7)
+id : 10
+nome : "Liquidificador"
+descricao : "Cor Preta 110v"
+estoque : 3
+fabricante : "Mundiale"
+
+No Query History foi possível também procurar os produtos via "fabricante"
+
+{"fabricante" : "Ultralar"}
+
+
+_id: ObjectId(66ae40d52d389ca176b9f4af)
+id : 2
+nome : "Ventilador de mesa"
+descricao : "Ventilador preto 40cm 110v"
+estoque : 5
+fabricante : "Ultralar"
+
+_id: ObjectId (66ae40d52d389ca176b9f4b2)
+id: 5
+nome: "Aspirador de pó"
+descricao: "Aspira pó 110v vermelho"
+estoque: 3
+fabricante
+"Ultralar"
+(...)
+
+Foram encontrados no total 14 produtos
+
+
