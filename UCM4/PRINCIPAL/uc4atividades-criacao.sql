@@ -1,22 +1,10 @@
--- MySQL Workbench Forward Engineering
-
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
--- -----------------------------------------------------
--- Schema uc4atividades
--- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema uc4atividades
--- -----------------------------------------------------
 CREATE DATABASE IF NOT EXISTS `uc4atividades` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
 USE `uc4atividades` ;
 
--- -----------------------------------------------------
--- Table `uc4atividades`.`cargo`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `uc4atividades`.`cargo` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(45) NULL DEFAULT NULL,
@@ -27,10 +15,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
-
--- -----------------------------------------------------
--- Table `uc4atividades`.`usuario`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `uc4atividades`.`usuario` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `login` VARCHAR(100) NOT NULL,
@@ -41,9 +25,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
--- -----------------------------------------------------
--- Table `uc4atividades`.`cliente`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `uc4atividades`.`cliente` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(255) NOT NULL,
@@ -57,10 +38,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
-
--- -----------------------------------------------------
--- Table `uc4atividades`.`funcionario`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `uc4atividades`.`funcionario` (
   `nome` VARCHAR(255) NOT NULL,
   `telefone` VARCHAR(45) NULL DEFAULT NULL,
@@ -81,10 +58,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
-
--- -----------------------------------------------------
--- Table `uc4atividades`.`venda`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `uc4atividades`.`venda` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `data` DATETIME NULL DEFAULT NULL,
@@ -110,10 +83,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
-
--- -----------------------------------------------------
--- Table `uc4atividades`.`produto`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `uc4atividades`.`produto` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(255) NOT NULL,
@@ -125,10 +94,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
-
--- -----------------------------------------------------
--- Table `uc4atividades`.`item_venda`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `uc4atividades`.`item_venda` (
   `quantidade` INT NOT NULL,
   `valor_unitario` DECIMAL(9,2) NOT NULL,
